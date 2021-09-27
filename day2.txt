@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+struct student{
+int rollno;
+float marks;
+};
+
+int main() {
+
+
+struct student *a;
+
+int n;
+cin>>n;
+a=(student*)malloc(n*sizeof(student));
+
+for(int i=0;i<n;i++){
+        cin >> (a+i)->rollno;
+        cin>>(a+i)->marks;
+    }
+
+for(int i=0;i<n;i++){
+    cout<<(a+i)->rollno<<",";
+    cout<<(a+i)->marks<<endl;
+    }
+
+}
